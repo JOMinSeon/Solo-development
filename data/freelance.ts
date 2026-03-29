@@ -27,44 +27,44 @@ export const differentiators: Differentiator[] = [
     icon: 'Zap',
     title: '기획부터 런칭까지 단일 책임',
     description:
-      '한 명의 개발자가 프로젝트 전 과정을 관리하므로 커뮤니케이션 손실 최소화, 일관된 비전 유지.',
+      '한 명의 개발자가 프로젝트 전 과정을 직접 관리하여 의사결정이 빠르고 커뮤니케이션 손실이 없습니다.',
     keyPoints: [
-      '스타트업 4개 서비스 기획 & 런칭 경험',
-      '사용자 피드백 → 개선 사이클 경험',
-      '기획 문제는 개발 전에 해결',
+      'PetCare 기획부터 App Store/Play Store 런칭까지',
+      '사용자 피드백 → 개선 사이클 직접 경험',
+      '기획 단계에서 기술 구현까지 통합 관리',
     ],
   },
   {
     id: 'ux-first',
     icon: 'Users',
-    title: 'UX-First 개발 접근',
+    title: '반려동물 보호자 관점의 UX',
     description:
-      '기술 구현보다 사용자 경험을 우선시. 아름다움과 기능성의 완벽한 균형.',
+      '나 자신도 반려동물 보호자입니다. 실제 사용자의 눈높이에서 서비스를 설계합니다.',
     keyPoints: [
-      '디자인 시스템 구축 (Tailwind 마스터)',
-      '반응형 디자인 필수 (모바일/태블릿/데스크탑)',
-      '성능 최적화 (웹 바이탈 개선)',
+      '디자인 시스템 구축 (Tailwind CSS)',
+      '반응형 디자인 (모바일/태블릿/데스크탑)',
+      '성능 최적화 (Core Web Vitals 개선)',
     ],
   },
   {
     id: 'long-term-maintenance',
     icon: 'Code',
-    title: '장기 유지보수를 고려한 개발',
+    title: 'AI 시대에 맞는 기술 선택',
     description:
-      '깔끔한 코드 구조, 명확한 문서화, 미래 확장을 염두에 둔 아키텍처.',
+      '새로운 AI 도구들을 적극 활용하여 생산성을 높이고, 깔끔한 코드 구조를 유지합니다.',
     keyPoints: [
       'TypeScript 타입 안정성',
+      'AI 도구 활용 (Claude Code, MiniMax-M2.7)',
       '재사용 가능한 컴포넌트 설계',
-      '명확한 주석 & 개발 문서 제공',
     ],
   },
 ];
 
 export const proofStats: ProofStat[] = [
-  { value: '15+', label: '완료 프로젝트', context: '스타트업 ~ 중견기업' },
-  { value: '98%', label: '고객 만족도', context: '프로젝트 완료율' },
-  { value: '4개', label: '런칭 서비스', context: '활발한 운영 중' },
-  { value: '10년', label: '개발 경력', context: '웹 & 앱 풀스택' },
+  { value: 'PetCare', label: '직접 기획/런칭', context: '반려동물 건강 관리' },
+  { value: '1인', label: '풀스택 개발', context: ' 기획부터 배포까지' },
+  { value: 'AI', label: '사료 분석 기능', context: '반려동물 건강 관리' },
+  { value: '모바일', label: 'React Native', context: 'iOS & Android' },
 ];
 
 export const services: Service[] = [
@@ -259,58 +259,22 @@ export const successStories: SuccessStory[] = [
     clientName: '코어넥스트',
     clientType: '자체 서비스',
     description:
-      '반려동물 건강 관리 올인원 플랫폼. 기획부터 런칭까지 통합 진행.',
+      '반려동물 건강 관리 올인원 플랫폼. 반려동물 보호자가 직접 기획부터 런칭까지 진행한 1인 개발 프로젝트입니다.',
     results: [
-      '1,000+ 활성 사용자 확보',
-      'App Store & Play Store 배포',
-      '월 50% 성장률 달성',
-      '매월 정기 기능 업데이트 운영 중',
+      'AI 사료 분석 기능 개발',
+      '반려동물 체중/칼로리 관리 기능',
+      'App Store & Play Store 배포 완료',
+      '지속적인 기능 업데이트 및 운영 중',
     ],
     tech: [
       'Next.js',
       'React Native',
       'TypeScript',
-      'PostgreSQL',
       'Tailwind CSS',
+      'Supabase',
     ],
-    period: '2023.01 ~ 현재',
+    period: '2024.01 ~ 현재',
     link: 'https://petcare.pe.kr',
-  },
-  {
-    id: 'b2b-saas',
-    projectName: 'B2B 관리 대시보드',
-    clientName: '스타트업 A',
-    clientType: '스타트업',
-    description: '영업/마케팅 팀의 캠페인 관리 및 성과 분석 플랫폼.',
-    results: [
-      '기획 2주 → 개발 6주 → 런칭 완료',
-      '팀 내 수작업 시간 70% 감소',
-      '데이터 기반 의사결정 가능',
-      '분기별 신규 기능 추가 운영 중',
-    ],
-    tech: [
-      'Next.js',
-      'TypeScript',
-      'TailwindCSS',
-      'PostgreSQL',
-      'API 설계',
-    ],
-    period: '2022.09 ~ 현재',
-  },
-  {
-    id: 'healthcare',
-    projectName: '헬스케어 예약 시스템',
-    clientName: '헬스케어 센터 B',
-    clientType: '중견기업',
-    description: '환자 예약, 의료진 스케줄 관리, 전자차트 통합 시스템.',
-    results: [
-      '예약 프로세스 자동화',
-      '월 300+ 환자 관리',
-      'HIPAA 규정 준수 달성',
-      '90% 이상 의료진 만족도',
-    ],
-    tech: ['React', 'TypeScript', 'Node.js', 'MySQL', 'Docker', 'AWS'],
-    period: '2021.04 ~ 2022.08',
   },
 ];
 

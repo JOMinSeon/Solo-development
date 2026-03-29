@@ -17,7 +17,7 @@ export default function FLSuccessStories() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-1 max-w-[480px] mx-auto md:max-w-none gap-6">
           {successStories.map((story: SuccessStory) => (
             <div
               key={story.id}
