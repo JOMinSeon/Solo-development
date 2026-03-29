@@ -207,9 +207,9 @@ export default function About() {
                   <Sparkles size={24} className="text-[var(--color-primary)]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">1. 데이터를 번역하는 '디자이너의 직관'</h3>
+                  <h3 className="text-xl font-bold mb-2">1. 데이터를 번역하는 &apos;디자이너의 직관&apos;</h3>
                   <p className="text-[var(--color-muted-foreground)] leading-relaxed">
-                    1년간 웹 디자이너로 일하며 쌓은 감각은 '펫헬스'의 가장 강력한 무기입니다. 아무리 정교한 AI 사료 분석과 체중 데이터라도 보호자가 한눈에 이해할 수 없다면 무용지물입니다. 저는 복잡하고 파편화된 건강 지표들을 누구나 직관적으로 파악할 수 있도록, 가장 쉽고 우아한 사용자 경험(UX)으로 설계합니다.
+                    1년간 웹 디자이너로 일하며 쌓은 감각은 &apos;펫헬스&apos;의 가장 강력한 무기입니다. 아무리 정교한 AI 사료 분석과 체중 데이터라도 보호자가 한눈에 이해할 수 없다면 무용지물입니다. 저는 복잡하고 파편화된 건강 지표들을 누구나 직관적으로 파악할 수 있도록, 가장 쉽고 우아한 사용자 경험(UX)으로 설계합니다.
                   </p>
                 </div>
               </div>
@@ -221,7 +221,7 @@ export default function About() {
                   <Zap size={24} className="text-[var(--color-primary)]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">2. 아이디어를 현실로 만드는 '개발자의 기민함'</h3>
+                  <h3 className="text-xl font-bold mb-2">2. 아이디어를 현실로 만드는 &apos;개발자의 기민함&apos;</h3>
                   <p className="text-[var(--color-muted-foreground)] leading-relaxed">
                     상상을 현실로 만들기 위해 직접 코드를 잡았습니다. 외주에 의존하거나 복잡한 의사결정 단계를 거치지 않기에 그 누구보다 빠릅니다. 보호자님들이 느끼는 불편함과 소중한 피드백을 가장 기민하게 캐치하여 즉각 서비스로 구현해 냅니다. 문제를 발견하면 곧바로 해결책을 화면에 띄우는 1인 개발사만의 압도적인 속도를 증명합니다.
                   </p>
@@ -235,9 +235,9 @@ export default function About() {
                   <HeartHandshake size={24} className="text-[var(--color-primary)]" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold mb-2">3. 기술의 방향을 잡는 '보호자의 공감'</h3>
+                  <h3 className="text-xl font-bold mb-2">3. 기술의 방향을 잡는 &apos;보호자의 공감&apos;</h3>
                   <p className="text-[var(--color-muted-foreground)] leading-relaxed">
-                    코드를 짜기 전에 먼저 보호자의 마음에 공감합니다. 어릴 적 반려견의 건강을 챙기며 느꼈던 막막함, 그리고 1인 가구 보호자로서 홀로 감당해야 하는 책임의 무게를 누구보다 깊이 이해하고 있습니다. 기술을 위한 기술이 아닌, '우리 아이의 건강한 일상'이라는 단 하나의 뚜렷한 목적을 향해 서비스를 깎아나갑니다.
+                    코드를 짜기 전에 먼저 보호자의 마음에 공감합니다. 어릴 적 반려견의 건강을 챙기며 느꼈던 막막함, 그리고 1인 가구 보호자로서 홀로 감당해야 하는 책임의 무게를 누구보다 깊이 이해하고 있습니다. 기술을 위한 기술이 아닌, &apos;우리 아이의 건강한 일상&apos;이라는 단 하나의 뚜렷한 목적을 향해 서비스를 깎아나갑니다.
                   </p>
                 </div>
               </div>

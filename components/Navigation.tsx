@@ -48,7 +48,6 @@ export default function Navigation() {
       } else {
         document.documentElement.classList.remove('dark');
       }
-      setIsDark(isDarkMode);
     }
   }, []);
 

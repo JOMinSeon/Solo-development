@@ -76,11 +76,14 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              <a href="https://petcare.pe.kr/" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="gap-2">
-                  입장하기
-                  <ArrowRight size={18} />
-                </Button>
+              <a
+                href="https://petcare.pe.kr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center h-12 px-6 text-[0.9375rem] font-medium bg-[var(--color-foreground)] text-[var(--color-background)] hover:opacity-85 rounded-lg transition-all duration-150 gap-2"
+              >
+                입장하기
+                <ArrowRight size={18} />
               </a>
               <Button variant="ghost" size="lg">
                 내 이야기 보기

@@ -19,7 +19,6 @@ export default function ResponseTimeInfo() {
       const now = new Date();
       const day = now.getDay();
       const hour = now.getHours();
-      const minute = now.getMinutes();
 
       const isWeekday = day >= 1 && day <= 5;
       const isWorkingHour = hour >= 9 && hour < 18;
@@ -30,14 +29,7 @@ export default function ResponseTimeInfo() {
       if (isOnlineStatus) {
         setCurrentTime('빠른 응답 가능');
       } else {
-        const nextWorkingDay = day === 0 ? 1 : day === 6 ? 1 : day + 1;
-        const nextDate = new Date(now);
-        if (day === 0 || day === 6) {
-          nextDate.setDate(nextDate.getDate() + (day === 0 ? 1 : 2));
-        } else if (hour >= 18) {
-          nextDate.setDate(nextDate.getDate() + 1);
-        }
-        setCurrentTime(`내일 오전 9시 이후`);
+        setCurrentTime('내일 오전 9시 이후');
       }
     };
 

@@ -39,7 +39,7 @@ export default function DesignCard() {
 
         {/* 첫 번째 텍스트 */}
         <div className="text-center text-[1.1rem] font-bold py-[15px] tracking-[-0.5px]">
-          '혁신' 중심 기하학적 모자이크 심볼
+          &apos;혁신&apos; 중심 기하학적 모자이크 심볼
         </div>
 
         {/* 구분선 */}

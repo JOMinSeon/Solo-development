@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { Palette, Heart, Cpu, Award } from 'lucide-react';
 
 const cards = [
@@ -14,7 +14,7 @@ const cards = [
     icon: Heart,
     value: '100%',
     title: '맞춤형 체중 및 칼로리 밀착 관리',
-    description: '개발 연차나 사용자 수 같은 규모를 자랑하는 대신, 서비스가 제공하는 확실한 가치와 꼼꼼함을 수치로 보여줍니다.',
+    description: '개발 연차나 사용자 수 같은 규모를 자랑하는 대신, 서비스가 제공하는 확실한价值和 꼼꼼함을 수치로 보여줍니다.',
   },
   {
     icon: Cpu,
@@ -31,25 +31,7 @@ const cards = [
 ];
 
 export default function FeaturedSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll('.scroll-reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
+  const sectionRef = useScrollReveal<HTMLElement>();
 
   return (
     <section

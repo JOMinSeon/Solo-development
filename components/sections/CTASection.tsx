@@ -1,30 +1,11 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
-import Button from '@/components/ui/Button';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function CTASection() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll('.scroll-reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
+  const sectionRef = useScrollReveal<HTMLElement>();
 
   return (
     <section
@@ -39,11 +20,12 @@ export default function CTASection() {
           <p className="text-lg text-[var(--color-muted-foreground)] max-w-xl mx-auto mb-8">
             개발자 생산성에 관심이 있거나 협력하고 싶으시면 언제든지 연락주세요.
           </p>
-          <Link href="/contact">
-            <Button size="lg" className="gap-2">
-              연락하기
-              <ArrowRight size={18} />
-            </Button>
+          <Link
+            href="/contact"
+            className="inline-flex items-center justify-center h-12 px-6 text-[0.9375rem] font-medium bg-[var(--color-foreground)] text-[var(--color-background)] hover:opacity-85 rounded-lg transition-all duration-150 gap-2"
+          >
+            연락하기
+            <ArrowRight size={18} />
           </Link>
         </div>
       </div>

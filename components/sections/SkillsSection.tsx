@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
 
 const skillCategories = [
   {
@@ -22,25 +22,7 @@ const skillCategories = [
 ];
 
 export default function SkillsSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    const elements = sectionRef.current?.querySelectorAll('.scroll-reveal');
-    elements?.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
+  const sectionRef = useScrollReveal<HTMLElement>();
 
   return (
     <section ref={sectionRef} className="py-16 md:py-20 px-4 md:px-6">
