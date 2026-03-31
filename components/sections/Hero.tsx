@@ -6,7 +6,7 @@ import { ArrowRight, ChevronDown } from 'lucide-react';
 
 const typingTexts = {
   en: ['builds AI tools.', 'ships products.', 'writes clean code.', 'innovates daily.'],
-  ko: ['AI 도구를 만듭니다.', '제품을 출시합니다.', '깔끔한 코드를 씁니다.', '매일 혁신합니다.'],
+  ko: ['아이디어를 만듭니다.', '시각을 현실로.', '문제를 해결합니다.', '매일 성장합니다.'],
 };
 
 export default function Hero() {
@@ -72,7 +72,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg md:text-xl text-[var(--color-muted-foreground)] max-w-2xl leading-relaxed mb-8">
-              &quot;AI 시대에 개발자들이 진정으로 중요한 것에 집중할 수 있는 도구를 만들고 있습니다.&quot;
+              막연한 아이디어를 시각적으로 완벽하게 번역해내는 진짜 파트너
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -89,7 +89,7 @@ export default function Hero() {
             </div>
 
             <div className="flex flex-wrap items-center gap-6 text-sm text-[var(--color-muted-foreground)] pb-10 lg:pb-12">
-              <span>복잡한 보고 체계 대신 빠른 실행과 수정을 선택합니다. 비즈니스의 속도에 맞춥니다</span>
+              <span>함께 만드는 것의 가치를 믿습니다. 당신의 비전을 실현하세요</span>
             </div>
           </div>
 
