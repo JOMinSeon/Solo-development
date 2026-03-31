@@ -96,7 +96,7 @@ export const services: Service[] = [
     title: '최신 하이브리드 앱 개발',
     subtitle: 'iOS / Android + 최신 하이브리드 개발 방식',
     description:
-      'React Native / Flutter 등 최신 하이브리드 방식으로 빠르게 프로토타입부터 배포까지. 적은 비용으로 최대 효율.',
+      'Capacitor로 기존 웹사이트를 그대로 패키징. 1~2주 만에 앱스토어 출시. 카메라, 푸시알림, 생체인증 등 네이티브 기능 한 줄의 코드로 연결.',
     scope: [
       '앱 기획 및 프로토타입',
       '네이티브/크로스 플랫폼 개발',
