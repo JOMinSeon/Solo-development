@@ -164,15 +164,13 @@ export default function Products() {
               <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl p-6 md:p-8">
                 <div className="aspect-video rounded-lg overflow-hidden mb-6 relative bg-[var(--color-surface)]">
                   <Image
-                    src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80"
+                    src="/images/thumbnail_large-1.webp"
                     alt="반려동물 건강케어"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 100vw, 50vw"
                     priority
-                    quality={75}
-                    placeholder="blur"
-                    blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAUH/8QAIhAAAQMDBAMBAAAAAAAAAAAAAQIDBAAFEQYSITEHE0FR/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAZEQADAQEBAAAAAAAAAAAAAAAAAQIDBBH/2gAMAwEAAhEDEQA/ANKttuuF0t8i4Wu2rkxozhZW4pYbK1JxkJBAJ5A56xStK1bXrfc7e1dYFtMdiTGakNOIeCwtDiQpJII4IIPHqpppPs"
+                    quality={80}
                   />
                   <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                     <div className="text-center">
