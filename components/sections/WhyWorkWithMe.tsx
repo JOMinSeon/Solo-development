@@ -64,7 +64,7 @@ export default function WhyWorkWithMe() {
         <div className="scroll-reveal text-center">
           <Link href="/contact">
             <Button size="lg" className="gap-2">
-              막연한 아이디어를 시각적으로 완벽하게 번역해 내는 진짜 파트너, 지금 바로 만나보세요
+              아이디어에서 Launch까지, 함께 만들어가는 파트너
               <ArrowRight size={18} />
             </Button>
           </Link>
