@@ -72,7 +72,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg md:text-xl text-[var(--color-muted-foreground)] max-w-2xl leading-relaxed mb-8">
-              막연한 아이디어를 시각적으로 완벽하게 번역해내는 진짜 파트너
+              아이디어에서 Launch까지, 함께 만들어가는 파트너
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
