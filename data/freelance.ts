@@ -268,7 +268,7 @@ export const successStories: SuccessStory[] = [
     ],
     tech: [
       'Next.js',
-      'React Native',
+      'Capacitor',
       'TypeScript',
       'Tailwind CSS',
       'Supabase',
