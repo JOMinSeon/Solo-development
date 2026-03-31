@@ -17,7 +17,7 @@ export const heroData: Hero = {
   title: '웹 개발의 모든 단계를 혼자 마스터한 풀스택 개발자',
   description:
     '기획부터 런칭까지 통합 관리. 신뢰할 수 있는 개발자와 함께 복잡한 프로젝트도 명확하게 완성하세요.',
-  ctaPrimary: { text: '상담 예약하기', href: '/schedule' },
+  ctaPrimary: { text: '상담 예약하기', href: 'https://docs.google.com/forms/d/e/1FAIpQLSfSEqANO2ySA4P7was_MCaVP2SPWDzWNDapTCZvPpv_-jkopA/viewform?pli=1' },
   ctaSecondary: { text: '포트폴리오 보기', href: '/projects' },
 };
 
@@ -387,7 +387,7 @@ export const ctaChannels: CTAChannel[] = [
     description:
       '캘린더에서 편한 시간을 선택하고 상담을 진행하세요. (15~30분)',
     actionText: '일정 예약',
-    actionHref: '/schedule',
+    actionHref: 'https://docs.google.com/forms/d/e/1FAIpQLSfSEqANO2ySA4P7was_MCaVP2SPWDzWNDapTCZvPpv_-jkopA/viewform?pli=1',
   },
   {
     id: 'cta-email',
