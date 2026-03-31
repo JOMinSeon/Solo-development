@@ -93,8 +93,8 @@ export const services: Service[] = [
   {
     id: 'mobile-app',
     icon: 'Smartphone',
-    title: '모바일 앱 개발',
-    subtitle: 'iOS / Android 네이티브 또는 크로스 플랫폼',
+    title: '최신 하이브리드 앱 개발',
+    subtitle: 'iOS / Android + 최신 하이브리드 개발 방식',
     description:
       'React Native를 활용한 크로스 플랫폼 앱 또는 네이티브 개발. 성능과 UX를 모두 만족시키는 앱.',
     scope: [
