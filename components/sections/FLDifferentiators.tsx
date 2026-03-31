@@ -31,10 +31,10 @@ export default function FLDifferentiators() {
             return (
               <div
                 key={item.id}
-                className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl p-6 hover:shadow-lg transition-shadow duration-200"
+                className="bg-[var(--color-surface)] border border-[var(--color-secondary)] rounded-xl p-6 hover:shadow-lg hover:border-[var(--color-primary)] transition-all duration-200"
               >
-                <div className="w-12 h-12 rounded-full bg-[var(--color-primary)]/10 flex items-center justify-center mb-4">
-                  <IconComponent size={24} className="text-[var(--color-primary)]" />
+                <div className="w-12 h-12 rounded-full bg-[var(--color-secondary)]/10 flex items-center justify-center mb-4">
+                  <IconComponent size={24} className="text-[var(--color-secondary)]" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                 <p className="text-sm text-[var(--color-muted-foreground)] mb-4">
@@ -43,7 +43,7 @@ export default function FLDifferentiators() {
                 <ul className="space-y-2">
                   {item.keyPoints.map((point, index) => (
                     <li key={index} className="text-sm text-[var(--color-muted-foreground)] flex items-start gap-2">
-                      <span className="text-[var(--color-success)]">✓</span>
+                      <span className="text-[var(--color-primary)]">✓</span>
                       {point}
                     </li>
                   ))}

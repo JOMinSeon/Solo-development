@@ -3,12 +3,16 @@
 :root {
   --color-background: #ffffff;
   --color-foreground: #171717;
-  --color-primary: #2563eb;
+  --color-primary: #FF6D00;
+  --color-primary-hover: #E65100;
+  --color-secondary: #1A237E;
+  --color-secondary-hover: #0D1453;
+  --color-highlight: #FFD600;
   --color-muted-foreground: #71717a;
   --color-border: #e5e5e5;
   --color-surface: #fafafa;
   --color-surface-hover: #f4f4f5;
-  --color-accent: #f59e0b;
+  --color-accent: #FF6D00;
   --color-success: #10b981;
   --color-subtle: #f0f0f0;
   --color-subtle-foreground: #404040;
@@ -23,12 +27,16 @@
 .dark {
   --color-background: #0a0a0a;
   --color-foreground: #ededed;
-  --color-primary: #3b82f6;
+  --color-primary: #FF6D00;
+  --color-primary-hover: #FF9E40;
+  --color-secondary: #5C6BC0;
+  --color-secondary-hover: #7986CB;
+  --color-highlight: #FFD600;
   --color-muted-foreground: #a1a1aa;
   --color-border: #262626;
   --color-surface: #111111;
   --color-surface-hover: #1a1a1a;
-  --color-accent: #fbbf24;
+  --color-accent: #FF6D00;
   --color-success: #34d399;
   --color-subtle: #1e1e1e;
   --color-subtle-foreground: #c0c0c0;
@@ -41,6 +49,10 @@
   --color-background: var(--color-background);
   --color-foreground: var(--color-foreground);
   --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-hover: var(--color-secondary-hover);
+  --color-highlight: var(--color-highlight);
   --color-muted-foreground: var(--color-muted-foreground);
   --color-border: var(--color-border);
   --color-surface: var(--color-surface);
@@ -83,7 +95,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-primary);
+  outline: 2px solid var(--color-highlight);
   outline-offset: 4px;
 }
 

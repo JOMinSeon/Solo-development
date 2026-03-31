@@ -127,10 +127,10 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-opacity duration-150 hover:opacity-70 ${
+                className={`text-sm font-medium transition-all duration-150 ${
                   pathname === link.href
-                    ? 'text-[var(--color-foreground)] font-semibold border-b-2 border-[var(--color-accent)] pb-1'
-                    : 'text-[var(--color-foreground)]'
+                    ? 'text-[var(--color-primary)] font-semibold border-b-2 border-[var(--color-primary)] pb-1'
+                    : 'text-[var(--color-foreground)] hover:text-[var(--color-primary)]'
                 }`}
               >
                 {link.label}
@@ -175,7 +175,7 @@ export default function Navigation() {
                 onClick={closeMenu}
                 className={`px-6 py-4 text-lg font-medium border-b border-[var(--color-border)] hover:bg-[var(--color-surface-hover)] transition-colors ${
                   pathname === link.href
-                    ? 'text-[var(--color-primary)] bg-[var(--color-surface)]'
+                    ? 'text-[var(--color-primary)] bg-[var(--color-surface)] font-semibold'
                     : 'text-[var(--color-foreground)]'
                 }`}
               >

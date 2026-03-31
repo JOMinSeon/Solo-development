@@ -62,7 +62,7 @@ export default function FLPricing() {
             {priceExamples.map((example, index) => (
               <div
                 key={index}
-                className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl p-6 text-center"
+                className="bg-[var(--color-surface)] border-2 border-[var(--color-border)] rounded-xl p-6 text-center hover:border-[var(--color-primary)] transition-colors"
               >
                 <h4 className="text-lg font-semibold mb-2">{example.projectType}</h4>
                 <div className="text-2xl font-bold text-[var(--color-primary)] mb-1">
@@ -88,7 +88,7 @@ export default function FLPricing() {
             {additionalServices.map((service, index) => (
               <div
                 key={index}
-                className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl p-6"
+                className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl p-6 hover:border-[var(--color-secondary)] transition-colors"
               >
                 <h4 className="text-base font-semibold mb-1">{service.service}</h4>
                 <div className="text-lg font-bold text-[var(--color-primary)] mb-2">

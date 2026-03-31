@@ -31,7 +31,7 @@ export default function FLCTA() {
               <a
                 key={channel.id}
                 href={channel.actionHref}
-                className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-200 block"
+                className="bg-[var(--color-surface)] border-2 border-[var(--color-border)] rounded-xl p-6 text-center hover:border-[var(--color-primary)] hover:shadow-lg transition-all duration-200 block"
               >
                 <div className="w-12 h-12 rounded-full bg-[var(--color-primary)]/10 flex items-center justify-center mx-auto mb-4">
                   <IconComponent size={24} className="text-[var(--color-primary)]" />
@@ -40,7 +40,7 @@ export default function FLCTA() {
                 <p className="text-sm text-[var(--color-muted-foreground)] mb-4">
                   {channel.description}
                 </p>
-                <span className="inline-block px-4 py-2 text-sm font-medium bg-[var(--color-primary)] text-white rounded-lg">
+                <span className="inline-block px-4 py-2 text-sm font-medium bg-[var(--color-primary)] text-white rounded-lg hover:bg-[var(--color-primary-hover)] transition-colors">
                   {channel.actionText}
                 </span>
               </a>

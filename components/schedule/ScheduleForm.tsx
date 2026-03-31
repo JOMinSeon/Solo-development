@@ -2,7 +2,7 @@
 
 import { useState, FormEvent } from 'react';
 import Button from '@/components/ui/Button';
-import { AlertCircle, Calendar, Phone, Video, MessageSquare } from 'lucide-react';
+import { AlertCircle, Calendar, Phone, Video, MessageSquare, ChevronDown } from 'lucide-react';
 import type { ScheduleFormData } from '@/types/schedule';
 import {
   PROJECT_TYPES,
@@ -24,6 +24,12 @@ const consultMethodIcons: Record<string, React.ReactNode> = {
   '전화 통화': <Phone size={16} />,
   '카카오톡': <MessageSquare size={16} />,
 };
+
+const inputStyles = 'w-full px-4 py-3 bg-[var(--color-background)] border rounded-lg text-[var(--color-foreground)] placeholder-[var(--color-muted-foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--color-highlight)] focus:ring-[40%] focus:border-[var(--color-primary)] transition-colors';
+
+const selectWrapperStyles = 'relative';
+
+const selectStyles = `${inputStyles} appearance-none pr-10`;
 
 export default function ScheduleForm() {
   const [formData, setFormData] = useState<ScheduleFormData>({
@@ -132,16 +138,17 @@ export default function ScheduleForm() {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className={`w-full px-4 py-3 bg-[var(--color-background)] border rounded-lg text-[var(--color-foreground)] placeholder-[var(--color-muted-foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors ${
+            className={`${inputStyles} ${
               errors.name
                 ? 'border-[var(--color-error)]'
                 : 'border-[var(--color-border)] hover:border-[var(--color-muted-foreground)]'
             }`}
             placeholder="홍길동"
             aria-required="true"
+            aria-describedby={errors.name ? 'name-error' : undefined}
           />
           {errors.name && (
-            <p className="mt-1 text-xs text-[var(--color-error)] flex items-center gap-1">
+            <p id="name-error" className="mt-1 text-xs text-[var(--color-error)] flex items-center gap-1" role="alert">
               <AlertCircle size={12} /> {errors.name}
             </p>
           )}
@@ -157,16 +164,17 @@ export default function ScheduleForm() {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className={`w-full px-4 py-3 bg-[var(--color-background)] border rounded-lg text-[var(--color-foreground)] placeholder-[var(--color-muted-foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors ${
+            className={`${inputStyles} ${
               errors.email
                 ? 'border-[var(--color-error)]'
                 : 'border-[var(--color-border)] hover:border-[var(--color-muted-foreground)]'
             }`}
             placeholder="fjkg33@gmail.com"
             aria-required="true"
+            aria-describedby={errors.email ? 'email-error' : undefined}
           />
           {errors.email && (
-            <p className="mt-1 text-xs text-[var(--color-error)] flex items-center gap-1">
+            <p id="email-error" className="mt-1 text-xs text-[var(--color-error)] flex items-center gap-1" role="alert">
               <AlertCircle size={12} /> {errors.email}
             </p>
           )}
@@ -183,7 +191,7 @@ export default function ScheduleForm() {
           name="phone"
           value={formData.phone}
           onChange={handleChange}
-          className="w-full px-4 py-3 bg-[var(--color-background)] border border-[var(--color-border)] hover:border-[var(--color-muted-foreground)] rounded-lg text-[var(--color-foreground)] placeholder-[var(--color-muted-foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors"
+          className={`${inputStyles} border-[var(--color-border)] hover:border-[var(--color-muted-foreground)]`}
           placeholder="010-1234-5678"
         />
       </div>
@@ -193,27 +201,31 @@ export default function ScheduleForm() {
           <label htmlFor="projectType" className="block text-sm font-medium mb-2">
             프로젝트 유형 <span className="text-[var(--color-error)]">*</span>
           </label>
-          <select
-            id="projectType"
-            name="projectType"
-            value={formData.projectType}
-            onChange={handleChange}
-            className={`w-full px-4 py-3 bg-[var(--color-background)] border rounded-lg text-[var(--color-foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors appearance-none ${
-              errors.projectType
-                ? 'border-[var(--color-error)]'
-                : 'border-[var(--color-border)] hover:border-[var(--color-muted-foreground)]'
-            }`}
-            aria-required="true"
-          >
-            <option value="">선택하세요</option>
-            {PROJECT_TYPES.map((type) => (
-              <option key={type} value={type}>
-                {type}
-              </option>
-            ))}
-          </select>
+          <div className={selectWrapperStyles}>
+            <select
+              id="projectType"
+              name="projectType"
+              value={formData.projectType}
+              onChange={handleChange}
+              className={`${selectStyles} ${
+                errors.projectType
+                  ? 'border-[var(--color-error)]'
+                  : 'border-[var(--color-border)] hover:border-[var(--color-muted-foreground)]'
+              }`}
+              aria-required="true"
+              aria-describedby={errors.projectType ? 'projectType-error' : undefined}
+            >
+              <option value="">선택하세요</option>
+              {PROJECT_TYPES.map((type) => (
+                <option key={type} value={type}>
+                  {type}
+                </option>
+              ))}
+            </select>
+            <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-muted-foreground)] pointer-events-none" size={20} />
+          </div>
           {errors.projectType && (
-            <p className="mt-1 text-xs text-[var(--color-error)] flex items-center gap-1">
+            <p id="projectType-error" className="mt-1 text-xs text-[var(--color-error)] flex items-center gap-1" role="alert">
               <AlertCircle size={12} /> {errors.projectType}
             </p>
           )}
@@ -223,27 +235,31 @@ export default function ScheduleForm() {
           <label htmlFor="budget" className="block text-sm font-medium mb-2">
             예산 범위 <span className="text-[var(--color-error)]">*</span>
           </label>
-          <select
-            id="budget"
-            name="budget"
-            value={formData.budget}
-            onChange={handleChange}
-            className={`w-full px-4 py-3 bg-[var(--color-background)] border rounded-lg text-[var(--color-foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors appearance-none ${
-              errors.budget
-                ? 'border-[var(--color-error)]'
-                : 'border-[var(--color-border)] hover:border-[var(--color-muted-foreground)]'
-            }`}
-            aria-required="true"
-          >
-            <option value="">선택하세요</option>
-            {BUDGET_OPTIONS.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
+          <div className={selectWrapperStyles}>
+            <select
+              id="budget"
+              name="budget"
+              value={formData.budget}
+              onChange={handleChange}
+              className={`${selectStyles} ${
+                errors.budget
+                  ? 'border-[var(--color-error)]'
+                  : 'border-[var(--color-border)] hover:border-[var(--color-muted-foreground)]'
+              }`}
+              aria-required="true"
+              aria-describedby={errors.budget ? 'budget-error' : undefined}
+            >
+              <option value="">선택하세요</option>
+              {BUDGET_OPTIONS.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+            <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-muted-foreground)] pointer-events-none" size={20} />
+          </div>
           {errors.budget && (
-            <p className="mt-1 text-xs text-[var(--color-error)] flex items-center gap-1">
+            <p id="budget-error" className="mt-1 text-xs text-[var(--color-error)] flex items-center gap-1" role="alert">
               <AlertCircle size={12} /> {errors.budget}
             </p>
           )}
@@ -255,20 +271,23 @@ export default function ScheduleForm() {
           <label htmlFor="timeline" className="block text-sm font-medium mb-2">
             희망 시작 시기 <span className="text-[var(--color-muted-foreground)]">(선택)</span>
           </label>
-          <select
-            id="timeline"
-            name="timeline"
-            value={formData.timeline}
-            onChange={handleChange}
-            className="w-full px-4 py-3 bg-[var(--color-background)] border border-[var(--color-border)] hover:border-[var(--color-muted-foreground)] rounded-lg text-[var(--color-foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors appearance-none"
-          >
-            <option value="">선택하세요</option>
-            {TIMELINE_OPTIONS.map((option) => (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            ))}
-          </select>
+          <div className={selectWrapperStyles}>
+            <select
+              id="timeline"
+              name="timeline"
+              value={formData.timeline}
+              onChange={handleChange}
+              className={`${selectStyles} border-[var(--color-border)] hover:border-[var(--color-muted-foreground)]`}
+            >
+              <option value="">선택하세요</option>
+              {TIMELINE_OPTIONS.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+            <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-muted-foreground)] pointer-events-none" size={20} />
+          </div>
         </div>
 
         <div>
@@ -281,7 +300,7 @@ export default function ScheduleForm() {
             name="preferredDate"
             value={formData.preferredDate}
             onChange={handleChange}
-            className="w-full px-4 py-3 bg-[var(--color-background)] border border-[var(--color-border)] hover:border-[var(--color-muted-foreground)] rounded-lg text-[var(--color-foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors"
+            className={`${inputStyles} border-[var(--color-border)] hover:border-[var(--color-muted-foreground)]`}
           />
         </div>
       </div>
@@ -296,10 +315,10 @@ export default function ScheduleForm() {
               key={method}
               type="button"
               onClick={() => handleRadioSelect('consultMethod', method)}
-              className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+              className={`flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium transition-colors border-2 ${
                 formData.consultMethod === method
-                  ? 'bg-[var(--color-foreground)] text-[var(--color-background)]'
-                  : 'bg-[var(--color-subtle)] text-[var(--color-subtle-foreground)] hover:bg-[var(--color-surface-hover)]'
+                  ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)]'
+                  : 'bg-transparent text-[var(--color-secondary)] border-[var(--color-secondary)] hover:bg-[var(--color-secondary)] hover:text-white'
               }`}
             >
               {consultMethodIcons[method]}
@@ -319,16 +338,17 @@ export default function ScheduleForm() {
           value={formData.message}
           onChange={handleChange}
           rows={5}
-          className={`w-full px-4 py-3 bg-[var(--color-background)] border rounded-lg text-[var(--color-foreground)] placeholder-[var(--color-muted-foreground)] focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/20 transition-colors resize-none ${
+          className={`${inputStyles} resize-none ${
             errors.message
               ? 'border-[var(--color-error)]'
               : 'border-[var(--color-border)] hover:border-[var(--color-muted-foreground)]'
           }`}
-          placeholder="프로젝트에 대해 설명해주세요.무엇을 만들고 싶은지, 필요로 하는 기능, 기대하는 결과 등을 알려주시면 상담에 큰 도움이 됩니다."
+          placeholder="프로젝트에 대해 설명해주세요. 무엇을 만들고 싶은지, 필요로 하는 기능, 기대하는 결과 등을 알려주시면 상담에 큰 도움이 됩니다."
           aria-required="true"
+          aria-describedby={errors.message ? 'message-error' : undefined}
         />
         {errors.message && (
-          <p className="mt-1 text-xs text-[var(--color-error)] flex items-center gap-1">
+          <p id="message-error" className="mt-1 text-xs text-[var(--color-error)] flex items-center gap-1" role="alert">
             <AlertCircle size={12} /> {errors.message}
           </p>
         )}
@@ -340,9 +360,11 @@ export default function ScheduleForm() {
         </p>
       )}
 
-      <Button type="submit" className="w-full gap-2" disabled={isSubmitting}>
+      <Button type="submit" className="w-full gap-2" disabled={isSubmitting} variant="primary">
         {isSubmitting ? (
-          '신청 중...'
+          <>
+            <span className="animate-pulse">신청 중...</span>
+          </>
         ) : (
           <>
             <Calendar size={16} />
