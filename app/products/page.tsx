@@ -164,7 +164,7 @@ export default function Products() {
               <div className="bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl p-6 md:p-8">
                 <div className="aspect-video rounded-lg overflow-hidden mb-6 relative">
                   <Image
-                    src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80"
+                    src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80"
                     alt="반려동물 건강케어"
                     fill
                     className="object-cover"
