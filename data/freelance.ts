@@ -96,7 +96,7 @@ export const services: Service[] = [
     title: '최신 하이브리드 앱 개발',
     subtitle: 'iOS / Android + 최신 하이브리드 개발 방식',
     description:
-      'React Native를 활용한 크로스 플랫폼 앱 또는 네이티브 개발. 성능과 UX를 모두 만족시키는 앱.',
+      'React Native / Flutter 등 최신 하이브리드 방식으로 빠르게 프로토타입부터 배포까지. 적은 비용으로 최대 효율.',
     scope: [
       '앱 기획 및 프로토타입',
       '네이티브/크로스 플랫폼 개발',
