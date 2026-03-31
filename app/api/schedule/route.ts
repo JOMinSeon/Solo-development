@@ -32,10 +32,12 @@ export async function POST(request: Request) {
     });
 
     const toEmail = process.env.TO_EMAIL || process.env.EMAIL_USER;
+    const fromName = process.env.EMAIL_FROM_NAME || '홈페이지管理员';
+    const fromEmail = process.env.EMAIL_USER;
 
     try {
       await transporter.sendMail({
-        from: process.env.EMAIL_USER,
+        from: `"${fromName}" <${fromEmail}>`,
         to: toEmail,
         subject: `[홈페이지 상담 신청] ${name}님 - ${projectType}`,
         html: `
