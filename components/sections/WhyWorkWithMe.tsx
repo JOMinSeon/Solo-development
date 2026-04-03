@@ -63,9 +63,8 @@ export default function WhyWorkWithMe() {
 
         <div className="scroll-reveal text-center">
           <Link href="/contact">
-            <Button size="lg" className="gap-2 flex-wrap justify-center text-center leading-snug px-5 py-3">
-              <span className="block sm:inline">아이디어에서 Launch까지,</span>
-              <span className="block sm:inline sm:ml-1">함께 만들어가는 파트너</span>
+            <Button size="lg" className="gap-2 justify-center text-center leading-snug px-5 py-3">
+              생각을 서비스로 꺼내드립니다
               <ArrowRight size={18} className="shrink-0" />
             </Button>
           </Link>

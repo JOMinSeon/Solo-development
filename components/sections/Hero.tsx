@@ -72,8 +72,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-lg sm:text-xl md:text-2xl text-[var(--color-muted-foreground)] max-w-2xl leading-relaxed mb-8">
-              <span className="block">아이디어에서 Launch까지,</span>
-              <span className="block">함께 만들어가는 파트너</span>
+              생각을 서비스로 꺼내드립니다
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
