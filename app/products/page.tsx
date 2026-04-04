@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import { Check, ArrowRight, Star, Users, Zap } from 'lucide-react';
 
-const tabs = ['개요', '기능', '가격'];
+const tabs = ['개요', '기능'];
 
 const features = [
   {
@@ -37,53 +37,6 @@ const features = [
     icon: '🔌',
     title: '성장 추적',
     description: '반려동물의 성장 과정을 사진과 함께 기록하세요.',
-  },
-];
-
-const plans = [
-  {
-    name: '무료',
-    price: '₩0',
-    period: '/월',
-    description: '시작하기 완벽',
-    features: [
-      '건강 기록 무제한',
-      '커뮤니티 접근',
-      '기본 기능',
-      '1개 반려동물',
-    ],
-    cta: '시작하기',
-    highlighted: false,
-  },
-{
-    name: '프리미엄',
-    price: '₩30,000',
-    period: '/월',
-    description: '가정용',
-    features: [
-      'PetAI 상담 무제한',
-      '상세 건강 기록 + 차트',
-      '수의사 원격 상담 3회/월',
-      '증상 사진 AI 분석',
-      '건강 리포트 PDF 월 1회',
-      '체중/식이 관리',
-    ],
-    cta: '무료 체험 시작',
-    highlighted: true,
-  },
-  {
-    name: '병원용',
-    price: '₩99,000',
-    period: '/월',
-    description: '동물병원 의사용',
-    features: [
-      '반려동물 무제한 등록',
-      'EMR 연동',
-      '수의사 원격 상담 무제한',
-      '건강 리포트 PDF 무제한',
-    ],
-    cta: '영업에 문의',
-    highlighted: false,
   },
 ];
 
@@ -230,55 +183,6 @@ export default function Products() {
                   <p className="text-sm text-[var(--color-muted-foreground)]">
                     {feature.description}
                   </p>
-                </div>
-              ))}
-            </div>
-          )}
-
-          {activeTab === '가격' && (
-            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-              {plans.map((plan, index) => (
-                <div
-                  key={index}
-                  className={`rounded-xl p-6 lg:p-8 ${
-                    plan.highlighted
-                      ? 'bg-[var(--color-foreground)] text-[var(--color-background)]'
-                      : 'bg-[var(--color-surface)] border border-[var(--color-border)]'
-                  }`}
-                >
-                  {plan.highlighted && (
-                    <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-[var(--color-accent)] text-[var(--color-foreground)] mb-4">
-                      가장 인기
-                    </span>
-                  )}
-                  <h3 className="text-xl font-semibold mb-1">{plan.name}</h3>
-                  <div className="flex items-baseline gap-1 mb-2">
-                    <span className="text-3xl lg:text-4xl font-bold">{plan.price}</span>
-                    <span className={`text-sm ${plan.highlighted ? 'text-[var(--color-background)]/70' : 'text-[var(--color-muted-foreground)]'}`}>
-                      {plan.period}
-                    </span>
-                  </div>
-                  <p className={`text-sm mb-6 ${plan.highlighted ? 'text-[var(--color-background)]/70' : 'text-[var(--color-muted-foreground)]'}`}>
-                    {plan.description}
-                  </p>
-                  <ul className="space-y-3 mb-6">
-                    {plan.features.map((feature, fIndex) => (
-                      <li key={fIndex} className="flex items-center gap-2 text-sm">
-                        <Check size={16} className={plan.highlighted ? 'text-[var(--color-accent)]' : 'text-[var(--color-success)]'} />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Button
-                    variant={plan.highlighted ? 'ghost' : 'outline'}
-                    className={`w-full ${
-                      plan.highlighted
-                        ? 'bg-[var(--color-background)] text-[var(--color-foreground)] hover:bg-[var(--color-background)]/90'
-                        : ''
-                    }`}
-                  >
-                    {plan.cta}
-                  </Button>
                 </div>
               ))}
             </div>
