@@ -78,7 +78,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
               <a
                 href="/contact"
-                className="inline-flex items-center justify-center h-11 px-5 text-[0.875rem] md:h-12 md:px-6 md:text-[0.9375rem] font-medium bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)] rounded-lg transition-all duration-150 gap-2"
+                className="inline-flex items-center justify-center h-14 px-5 text-[0.875rem] md:h-16 md:px-6 md:text-[0.9375rem] font-medium bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary-hover)] rounded-lg transition-all duration-150 gap-2"
               >
                 문의하기
                 <ArrowRight size={18} />

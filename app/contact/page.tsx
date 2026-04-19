@@ -61,20 +61,22 @@ export default function Contact() {
                 </a>
 
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.threads.net/@fjkg123?hl=ko"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 p-4 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-lg hover:bg-[var(--color-surface-hover)] transition-colors"
                 >
                   <div className="p-3 bg-[var(--color-subtle)] rounded-lg">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" className="text-[var(--color-muted-foreground)]">
-                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-[var(--color-muted-foreground)]">
+                      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2"/>
+                      <path d="M8.5 12.5c0-1.5 1-3 3.5-3s3.5 1.5 3.5 3-1 3-3.5 3-3.5-1.5-3.5-3z" stroke="currentColor" strokeWidth="2"/>
+                      <circle cx="17" cy="7" r="1" fill="currentColor"/>
                     </svg>
                   </div>
                   <div>
-                    <div className="font-medium">LinkedIn</div>
+                    <div className="font-medium">Threads</div>
                     <div className="text-sm text-[var(--color-muted-foreground)]">
-                      /in/username
+                      @fjkg123
                     </div>
                   </div>
                 </a>
